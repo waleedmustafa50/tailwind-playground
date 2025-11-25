@@ -82,10 +82,22 @@
 
 <div class="flex gap-2 bg-gray-100 p-4">
   <div class="basis-32 bg-blue-500 text-white p-2">basis-32</div>
-  <div class="w-64 bg-green-500 text-white p-2">basis-64</div>
+  <div class="w-64 grow bg-green-500 text-white p-2">basis-64</div>
   <div class="basis-32 bg-red-500 text-white p-2">basis-32</div>
   <!-- Extra space remains unused! -->
 </div>
+<!-- This will NOT shrink below 256px -->
+<div class="flex gap-2 bg-gray-100 p-4">
+  <div class="w-64 bg-blue-500 text-white p-2">w-64 shrink-0 (overflows if needed)</div>
+  <div class="w-64  bg-green-500 text-white p-2">w-64 shrink-0</div>
+  <div class="w-64 bg-red-500 text-white p-2">w-64 shrink-0</div>
+</div>
 
+<!-- This CAN shrink below 256px -->
+<div class="flex gap-2 bg-gray-100 p-4">
+  <div class="basis-64 bg-blue-500 text-white p-2">basis-64 (shrinks by default)</div>
+  <div class="basis-64 bg-green-500 text-white p-2">basis-64</div>
+  <div class="basis-64 bg-red-500 text-white p-2">basis-64</div>
+</div>
 </body>
 </html>
